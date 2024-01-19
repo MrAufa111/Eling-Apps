@@ -7,7 +7,7 @@ import HomeScreen from './App/Pages/Home';
 
 const Stack = createNativeStackNavigator();
 
-const App = () => {
+const Home = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
@@ -22,4 +22,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
