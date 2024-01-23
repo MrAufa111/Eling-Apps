@@ -12,21 +12,29 @@ const HomeScreen = ({ navigation }) => {
   const handleLogout = () => {
     // Tambahkan logika logout sesuai kebutuhan Anda
     console.log('Logout pressed');
+    navigation.navigate('Login');
   };
   const toggleEmer = ()=> {
     console.log('Tombol Telah DI tekan');
+    setModalVisible(!isModalVisible);
+  }
+  const handleProfile = ()=> {
+    console.log('Tombol Profile Di tekan');
+    navigation.navigate('Profile');
     setModalVisible(!isModalVisible);
   }
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
 
+  
+
   return (
     <View style={styles.container}>
       <AppHeader onLogoutPress={handleLogout} />
       <View style={styles.row}>
       
-        <Image style={styles.image} source={require('./../Assets/Images/Profile.png')}/>
+        <Image style={styles.image} source={require('./../Assets/Images/k.png')}/>
         <Text style={styles.username}>Hi Username</Text>
       </View>
       <View style={styles.containerDashboard}>  
@@ -61,7 +69,8 @@ const HomeScreen = ({ navigation }) => {
               iconPosition="top"
             />
             <Button 
-              title="Profile"
+              title="Go to Profile"
+              onPress={handleProfile}
               icon={<FontAwesomeIcon icon={faUser} size={70} />} 
               buttonStyle= {styles.buttonMenu}
               titleStyle={styles.buttonText}
@@ -78,15 +87,17 @@ const HomeScreen = ({ navigation }) => {
         >
         <View style={styles.modalContent}>
         <FontAwesomeIcon style={{marginTop:20}} icon={faTriangleExclamation} size={150} color='#FFD43B' />
-        <View style={styles.ButtonDarurat}>
+        <View style={styles.ButtonDarurat }>
+        <Text style={styles.textmodal}>Anda Yakin?</Text>
           <TouchableOpacity style={styles.modalButton} onPress={toggleEmer}>
-            <Text style={{fontSize:25, color:Colors.red}}>Tekan</Text>
+            <Text style={{fontSize:25, color:Colors.red }}>TEKAN</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.modalButton} onPress={toggleModal}>
-            <Text style={{fontSize:25}}>Batal</Text>
+            <Text style={{fontSize:25}}>BATAL</Text>
           </TouchableOpacity>
         </View>
         </View>
+
       </Modal>
         
       </View>
@@ -102,27 +113,35 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     marginTop: 30, 
   },
-
+  textmodal:{
+    color:Colors.white,
+    fontSize:25,
+    marginBottom:89,
+    marginTop:49,
+    alignItems: 'center',
+  },
   modalButton: {
     flex: 1, 
-    backgroundColor: 'lightblue', 
-    padding: 10,
+    backgroundColor: 'white', 
+    padding: 5,
     height: windowHeight *0.06,
     borderRadius: 15,
     marginHorizontal: 5, 
+    marginTop: 30,
     alignItems: 'center',
   },
   
   modalContent: {
     backgroundColor: Colors.red,
     alignItems: 'center',
-    borderRadius: 35,
+    borderRadius: 30,
     height: windowHeight* 0.35
 
   },
   buttonText:{
     marginTop:10,
     color:Colors.black,
+    
   },
   buttonMenu:{
     margin:10,
@@ -141,7 +160,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginTop:33,
-    backgroundColor: Colors.darkBlue,
+    backgroundColor: '#2405A1',
     
   },
   row:{
@@ -164,7 +183,7 @@ const styles = StyleSheet.create({
   username:{
     fontSize:20,
     color:Colors.white,
-    marginBottom:15,
+    marginBottom:30,
   },
   containerDashboard:{
     alignItems:'center',
@@ -178,7 +197,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.red,
     width: windowWidth * 0.9, 
     height:windowHeight* 0.11,
-    borderRadius: 30,
+    borderRadius: 20,
     marginTop:15,
     marginBottom: 10, 
   },

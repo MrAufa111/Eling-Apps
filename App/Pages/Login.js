@@ -22,20 +22,19 @@ const MyForm = () => {
       <View style={styles.card}>
         <View style={styles.rowr}>
         <Image style={styles.image} source={require('./../Assets/Images/Logo.png')} />
-        <Text style={styles.textContent}>E-Ling</Text>
-        <Text style={styles.textInfo}>Silahkan Gunakan Akun Anda Untuk Login</Text>
+        <Text style={styles.textContent}>E-LING</Text>
         <View style={styles.inputContainer2}>
-          <Text style={styles.NIK}>NIK</Text>
+          <Text style={styles.NIK}>NIK :</Text>
           <Input
-            placeholder="Masukan NIK"
+            placeholder="Masukkan NIK..."
             onChangeText={(text) => setUsername(text)}
             value={username}
             inputContainerStyle={styles.inputContainer}
             inputStyle={styles.inputText}
           />
-          <Text style={styles.NIK}>Password</Text>
+          <Text style={styles.NIK}>Password :</Text>
           <Input
-            placeholder="Masukan Password"
+            placeholder="Masukkan Password..."
             secureTextEntry={true}
             onChangeText={(text) => setPassword(text)}
             value={password}
@@ -62,8 +61,8 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     borderStyle:'solid',
-    backgroundColor:Colors.darkBlue,
-    height: windowHeight * 1.5,
+    backgroundColor: Colors.white,
+    height: windowHeight * 1.3,
     width: windowWidth * 1,
  
   },
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderStyle: 'solid',
     borderRadius:20,
-    height: windowHeight * 0.9,
+    height: windowHeight * 0.2,
   },
   row:{
     marginTop:2,
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
   },
   card:{
     borderRadius:4,
-    marginTop:50,
+    marginTop:80,
    
   },
   image: {
@@ -95,9 +94,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textContent: {
-    fontSize: 35,
+    fontSize: 40,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 50,
     textShadowColor: Colors.lightGray,
     textShadowRadius:1,
     color: Colors.darkBlue
@@ -108,8 +107,8 @@ const styles = StyleSheet.create({
     marginBottom:20,
   },
   inputContainer: {
-    borderColor:Colors.darkBlue,
-    backgroundColor: Colors.lightGrayy,
+    borderColor:Colors.lightGray,
+    backgroundColor: Colors.lightGray,
     borderWidth: 1,
     borderRadius: 20,
     marginBottom: 10,
@@ -118,6 +117,7 @@ const styles = StyleSheet.create({
   inputText: {
     fontSize: 15,
     padding: 10,
+    marginLeft: 14,
   },
   button: {
     backgroundColor: Colors.darkBlue,
@@ -132,8 +132,8 @@ const styles = StyleSheet.create({
   },
   NIK:{
     fontSize:18,
-    fontWeight: 'bold',
-    marginBottom:2,
+    fontWeight: 'regular',
+    marginBottom:11,
   },
   
   

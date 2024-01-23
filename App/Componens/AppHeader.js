@@ -22,15 +22,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 15,
+    padding: 10,
     backgroundColor: Colors.white, 
   },
   logo: {
-    width: 30,
-    height: 30,
+    width: 35,
+    height: 35,
   },
   logoutIcon: {
-    color: '#000000', 
+    color: '#2405A1', 
   },
 });
 
