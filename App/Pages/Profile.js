@@ -30,7 +30,10 @@ const ProfileScreen= ({ navigation }) => {
       </TouchableOpacity>
         <Image style={styles.image} source={require('./../Assets/Images/k.png')}/>
       </View>
-      
+      <View style={styles.containerDashboard}>  
+      <Text style={styles.NIK}>NIK :</Text>
+        
+      </View>
     </View>
   );
 };
@@ -51,9 +54,8 @@ const styles = StyleSheet.create({
     width: windowWidth * 0.21,
     height:windowHeight* 0.10,
     resizeMode: 'contain',
-    marginBottom:20,
+    marginBottom:30,
   },
-
   containerDashboard:{
     alignItems:'center',
     color:Colors.white,

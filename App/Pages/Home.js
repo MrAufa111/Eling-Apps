@@ -14,13 +14,12 @@ const HomeScreen = ({ navigation }) => {
     console.log('Logout pressed');
     navigation.navigate('Login');
   };
-  const toggleEmer = ()=> {
-    console.log('Tombol Telah DI tekan');
-    setModalVisible(!isModalVisible);
-  }
   const handleProfile = ()=> {
     console.log('Tombol Profile Di tekan');
     navigation.navigate('Profile');
+  };
+  const toggleEmer = ()=> {
+    console.log('Tombol Telah DI tekan');
     setModalVisible(!isModalVisible);
   }
   const toggleModal = () => {
@@ -116,8 +115,8 @@ const styles = StyleSheet.create({
   textmodal:{
     color:Colors.white,
     fontSize:25,
-    marginBottom:5,
-    marginTop:10,
+    marginBottom:7,
+    marginTop:2,
     alignItems: 'center',
   },
   modalButton: {
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white', 
     padding: 5,
     height: windowHeight *0.05,
-    borderRadius: 15,
+    borderRadius: 10,
     marginHorizontal: 16, 
     marginTop: 1,
     alignItems: 'center',
@@ -134,7 +133,7 @@ const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: Colors.red,
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 20,
     height: windowHeight* 0.35
 
   },
@@ -179,7 +178,6 @@ const styles = StyleSheet.create({
     fontSize:15,
     marginBottom:30,
   },
-
   username:{
     fontSize:20,
     color:Colors.white,
