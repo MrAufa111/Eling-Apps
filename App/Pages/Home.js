@@ -87,8 +87,8 @@ const HomeScreen = ({ navigation }) => {
         >
         <View style={styles.modalContent}>
         <FontAwesomeIcon style={{marginTop:20}} icon={faTriangleExclamation} size={150} color='#FFD43B' />
-        <View style={styles.ButtonDarurat }>
         <Text style={styles.textmodal}>Anda Yakin?</Text>
+        <View style={styles.ButtonDarurat }>
           <TouchableOpacity style={styles.modalButton} onPress={toggleEmer}>
             <Text style={{fontSize:25, color:Colors.red }}>TEKAN</Text>
           </TouchableOpacity>
@@ -116,18 +116,18 @@ const styles = StyleSheet.create({
   textmodal:{
     color:Colors.white,
     fontSize:25,
-    marginBottom:89,
-    marginTop:49,
+    marginBottom:5,
+    marginTop:10,
     alignItems: 'center',
   },
   modalButton: {
     flex: 1, 
     backgroundColor: 'white', 
     padding: 5,
-    height: windowHeight *0.06,
+    height: windowHeight *0.05,
     borderRadius: 15,
-    marginHorizontal: 5, 
-    marginTop: 30,
+    marginHorizontal: 16, 
+    marginTop: 1,
     alignItems: 'center',
   },
   
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
 
   },
   buttonText:{
-    marginTop:10,
+    marginTop:8,
     color:Colors.black,
     
   },

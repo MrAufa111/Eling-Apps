@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius:30
   },
   BackIcon:{
-    justifyContent: 'left',
+    alignItems: 'left',
     color:Colors.white,
     marginTop: 10,
   },
@@ -70,5 +70,3 @@ const styles = StyleSheet.create({
 });
 
 export default ProfileScreen;
-
-https://github.com/MrAufa111/Eling-Apps
