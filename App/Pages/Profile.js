@@ -68,6 +68,11 @@ const styles = StyleSheet.create({
     color:Colors.white,
     marginTop: 10,
   },
+  NIK:{
+    fontSize:18,
+    fontWeight: 'regular',
+    marginBottom:11,
+  },
 
 });
 
