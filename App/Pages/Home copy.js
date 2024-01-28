@@ -18,10 +18,6 @@ const HomeScreen = ({ navigation }) => {
     console.log('Tombol Profile Di tekan');
     navigation.navigate('Profile');
   };
-  const handleData = ()=> {
-    console.log('Tombol Data Warga Di tekan');
-    navigation.navigate('Data');
-  };
   const toggleEmer = ()=> {
     console.log('Tombol Telah DI tekan');
     setModalVisible(!isModalVisible);
@@ -50,7 +46,6 @@ const HomeScreen = ({ navigation }) => {
           <View style={styles.Menurow}>
             <Button 
               title="Data Warga"
-              onPress={handleData}
               icon={<FontAwesomeIcon icon={faListAlt} size={70} />} 
               buttonStyle= {styles.buttonMenu}
               titleStyle={styles.buttonText}
