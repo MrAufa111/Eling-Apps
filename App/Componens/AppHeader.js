@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     height: 35,
   },
   logoutIcon: {
-    color: '#2405A1', 
+    color: Colors.navy, 
   },
 });
 

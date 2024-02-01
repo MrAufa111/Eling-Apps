@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faTriangleExclamation,faClipboardList, faListAlt, faBullhorn, faBell, faUser, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import AppHeader from '../Componens/AppHeader';
 import Colors from '../Shared/Colors'
+import { colors } from 'react-native-elements';
+import Dropdown from '../Componens/Dropdown';
 
 const DataScreen = ({ navigation }) => {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -17,20 +19,32 @@ const DataScreen = ({ navigation }) => {
   const toggleBack = ()=> {
     console.log('Tombol Kembali Ke Home Ditekan');
     navigation.navigate('Home');
+  };
+  const Dropdown = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
   
+    const options = ['Pilihan 1', 'Pilihan 2', 'Pilihan 3'];
+  
+    const toggleDropdown = () => {
+      setIsOpen(!isOpen);
+    };
   }
+  
   
 
   return (
     <View style={styles.container}>
       <AppHeader onLogoutPress={handleLogout} />
-      <View style={styles.containerDashboard}>  
-      <View style={styles.container}>
+      <View style={styles.containerTitle}>  
       <TouchableOpacity onPress={toggleBack}>
         <FontAwesomeIcon icon={faArrowLeft} size={24} style={styles.BackIcon} iconPosition="top"/>
       </TouchableOpacity>
-    </View>
+      <Text style={styles.datatxt}> DATA WARGA </Text>
       </View>  
+      <View style={styles.containerData}>
+
+      </View>
     </View>
   );
 };
@@ -39,25 +53,40 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     marginTop:33,
-    backgroundColor: '#2405A1',
+    backgroundColor: Colors.navy,
   },
   username:{
     fontSize:20,
     color:Colors.white,
     marginBottom:30,
   },
-  containerDashboard:{
+  containerTitle:{
     alignItems:'center',
     color:Colors.white,
     backgroundColor:Colors.white,
-    marginTop: 5,
+    flexDirection: 'row',
+    marginTop: 3,
+    marginBottom:1,
+    justifyContent: 'space-between',
   },
   BackIcon:{
-    color:Colors.darkBlue,
-    marginTop: 5,
-    marginBottom: 90,
-   alignItems: 'flex-end',
+    color:Colors.navy,
+    marginTop:5,
+    marginBottom:5,
+    justifyContent: 'flex-end',
+    marginLeft:10,
   },
+  datatxt:{
+    fontSize:18,
+    fontWeight: 'bold',
+    color: Colors.navy,
+    marginRight: 150,
+    marginTop:5,
+    marginBottom:5,
+  },
+  selectedOption:{
+    marginTop:10,
+  }
 });
 
 export default DataScreen;

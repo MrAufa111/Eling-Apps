@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 50,
-    textShadowColor: Colors.lightGray,
+    textShadowColor: Colors.navy,
     textShadowRadius:1,
     color: Colors.darkBlue
   },
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     marginLeft: 14,
   },
   button: {
-    backgroundColor: Colors.darkBlue,
+    backgroundColor: Colors.navy,
     width: windowWidth * 0.4, 
     height:windowHeight* 0.06,
     borderRadius: 22,

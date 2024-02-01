@@ -3,8 +3,9 @@ import { Button } from '@rneui/themed';
 import { View, Text, StyleSheet, Image,Dimensions,TouchableOpacity } from 'react-native';
 import Modal from 'react-native-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faTriangleExclamation,faClipboardList, faListAlt, faBullhorn, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faTriangleExclamation,faClipboardList, faListAlt, faBullhorn, faBell, faUser, faTableCells, faTableList, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 import AppHeader from '../Componens/AppHeader';
+import Bottom from '../Componens/Bottom';
 import Colors from '../Shared/Colors'
 
 const HomeScreen = ({ navigation }) => {
@@ -35,6 +36,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <AppHeader onLogoutPress={handleLogout} />
+      <Bottom />
       <View style={styles.row}>
       
         <Image style={styles.image} source={require('./../Assets/Images/k.png')}/>
@@ -66,8 +68,8 @@ const HomeScreen = ({ navigation }) => {
           </View>
           <View style={styles.Menurow}>
             <Button 
-              title="Notifikasi"
-              icon={<FontAwesomeIcon icon={faBell} size={70} />} 
+              title="Ronda"
+              icon={<FontAwesomeIcon icon={faShieldHalved} size={70} />} 
               buttonStyle= {styles.buttonMenu}
               titleStyle={styles.buttonText}
               iconPosition="top"
@@ -132,7 +134,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginHorizontal: 16, 
     marginTop: 1,
-    alignItems: 'center',
+    alignItems: 'center', 
   },
   
   modalContent: {
@@ -145,6 +147,7 @@ const styles = StyleSheet.create({
   buttonText:{
     marginTop:8,
     color:Colors.black,
+    fontWeight: 'regular',
     
   },
   buttonMenu:{
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
     width:windowWidth * 0.4,
     height:windowHeight * 0.2,
     borderRadius:20,
-    backgroundColor:'#E9E9E9'
+    backgroundColor:'#F5F7F8',
   },
   Menu:{
     alignItems:'center',
@@ -164,7 +167,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginTop:33,
-    backgroundColor: '#2405A1',
+    backgroundColor: '#0F2167',
     
   },
   row:{
@@ -179,7 +182,7 @@ const styles = StyleSheet.create({
     marginBottom:20,
   },
   textdarurat:{
-    color:Colors.red,
+    color:Colors.red, 
     fontSize:15,
     marginBottom:30,
   },
@@ -191,8 +194,8 @@ const styles = StyleSheet.create({
   containerDashboard:{
     alignItems:'center',
     color:Colors.white,
-    backgroundColor:Colors.white,
-    borderTopLeftRadius:30,
+    backgroundColor:Colors.white, 
+    borderTopLeftRadius:50,
     borderTopRightRadius:30
   },
   button: {

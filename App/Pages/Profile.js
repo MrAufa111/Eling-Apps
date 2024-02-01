@@ -43,7 +43,7 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     marginTop:40,
-    backgroundColor: Colors.darkBlue,
+    backgroundColor: Colors.navy,
     
   },
   row:{
